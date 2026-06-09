@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Llamado de Atención Disciplinario</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <center>
+            <h2>Generador de Llamado Disciplinario (SENA)</h2>
+            <p>Diligencie los datos para generar el documento PDF.</p>
+        </center>
+
+        <form id="formularioLlamado">
+            <div class="form-group">
+                <label for="ciudadFecha">Ciudad y Fecha de Emisión:</label>
+                <input type="text" id="ciudadFecha" placeholder="Ej: Barranquilla - 9 de junio de 2026" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="aprendiz">Nombre del Aprendiz:</label>
+                <input type="text" id="aprendiz" placeholder="Ej: JUANA DE ARCO" required>
+            </div>
+
+            <div class="form-group">
+                <label for="programa">Programa de Formación:</label>
+                <input type="text" id="programa" placeholder="Ej: Producción de Componentes Mecánicos..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="ficha">Número de Ficha:</label>
+                <input type="number" id="ficha" placeholder="Ej: 1234567" required>
+            </div>
+
+            <div class="form-group">
+                <label for="centro">Centro de Formación:</label>
+                <input type="text" id="centro" value="CENTRO NACIONAL COLOMBOALEMAN" required>
+            </div>
+
+            <div class="form-group">
+                <label for="diasInasistencia">Días y Mes de Inasistencia:</label>
+                <input type="text" id="diasInasistencia" placeholder="Ej: los días 26 del mes de enero del presente año" required>
+            </div>
+
+            <div class="form-group">
+                <label for="instructor">Nombre del Instructor:</label>
+                <input type="text" id="instructor" placeholder="Ej: WILFRIDO ROMERO" required>
+            </div>
+
+            <div class="form-group">
+                <label for="area">Área del Instructor:</label>
+                <input type="text" id="area" placeholder="Ej: Metalmecánica" required>
+            </div>
+
+            <center>
+                <button type="button" onclick="generarPDF()">Generar Documento PDF</button>
+            </center>
+        </form>
+    </div>
+
+    <footer>
+        <center>
+            <p>Desarrollado por <a href="https://github.com/tu-usuario" target="_blank">Programador GitHub</a></p>
+        </center>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
